@@ -1,3 +1,25 @@
 <resources>
-  <string name="app_name">TestTask4</string>
+  <string name="app_name">Тестовое задание</string>
+  <string name="t_resume">Продолжить</string>
+  <string name="t_back">Назад</string>
+  <string name="t_age">Возраст</string>
+  <string name="t_sex">Пол</string>
+  <string name="msg_do_you_want_to_exit">Вы хотите выйти из программы?</string>
+  <string name="response_json">
+    {
+     "person" : [
+              {"name":"Ivan","surname":"Ivanov","age":"25","sex":"male","occupation":"CEO"},
+              {"name":"Petr","surname":"Sidorov","age":"20","sex": "male","occupation":"Developer"},
+              {"name":"Andrey","surname":"Zaripov","age":"23","sex": "male","occupation":"Supply manager"},
+              {"name":"Sergey","surname":"Petrov-Vodkin","age":"33","sex": "male","occupation":"Account manager"},
+              {"name":"Konstantin","surname":"Paustovskiy","age":"35","sex": "male","occupation":"Driver"},
+              {"name":"Olga","surname":"Stepanova","age":"26","sex": "female","occupation":"Manager"},
+              {"name":"Iryna","surname":"Sviridova","age":"35","sex": "female","occupation":"CEO"},
+              {"name":"Valentyna","surname":"Stepanova","age":"33","sex": "female","occupation":"Manager"},
+              {"name":"Olga","surname":"Paustovskiy","age":"35","sex": "female","occupation":"Manager"},
+              {"name":"Anna","surname":"Grigorishina","age":"40","sex": "female","occupation":"Key account manager"},
+              {"name":"Stepan","surname":"Andreev","age":"27","sex": "male","occupation":"Driver"}
+                 ]
+    }
+  </string>
 </resources>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+
+    <variable
+        name="person"
+        type="com.stud.awra.testtask4.model.Person" />
+  </data>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_margin="5dp"
+      android:orientation="vertical"
+      android:padding="10dp"
+      app:cardCornerRadius="5dp"
+      app:cardElevation="5dp">
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@{person.name +' '+person.surname }"
+        android:textColor="?colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="Ivan Ivanov"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:id="@+id/textView1"
+        app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textView2" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@{person.occupation}"
+        android:textColor="?colorAccent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="CEO"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:id="@+id/textView2"
+        app:layout_constraintStart_toEndOf="@+id/appCompatImageView"
+        android:layout_marginBottom="18dp"
+        app:layout_constraintBottom_toTopOf="@+id/barrier2" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="5dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/ic_person"
+        android:id="@+id/appCompatImageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/barrier2" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="@string/t_age"
+        tools:text="awras"
+        android:textColor="?colorPrimaryDark"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        android:id="@+id/textView3"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/barrier2"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="12dp" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="@string/t_sex"
+        tools:text="awra"
+        android:textColor="?colorPrimaryDark"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        android:id="@+id/textView5" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="@{person.age}"
+        tools:text="Age"
+        android:textColor="?colorPrimaryDark"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/textView4"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintBottom_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toTopOf="@+id/textView3" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:text="@{person.sex}"
+        tools:text="Sex"
+        android:textColor="?colorPrimaryDark"
+        style="@style/TextAppearance.MaterialComponents.Headline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/textView6"
+        app:layout_constraintStart_toEndOf="@+id/barrier"
+        app:layout_constraintTop_toTopOf="@+id/textView5"
+        app:layout_constraintBottom_toBottomOf="@+id/textView5" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/t_back"
+        android:id="@+id/bt_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/barrier"
+        app:barrierDirection="right"
+        android:visibility="invisible"
+        app:constraint_referenced_ids="textView3,textView5" />
+
+    <androidx.constraintlayout.widget.Barrier
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="textView2,appCompatImageView"
+        android:id="@+id/barrier2"
+        app:barrierDirection="bottom" />
+
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

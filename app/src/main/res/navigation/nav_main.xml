@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/firstScreen">
+
+  <fragment
+      android:id="@+id/firstScreen"
+      android:name="com.stud.awra.testtask4.screens.FirstScreen"
+      tools:layout="@layout/screen_1">
+    <action
+        android:id="@+id/action_firstScreen_to_secondScreen"
+        app:destination="@id/secondScreen"></action>
+  </fragment>
+  <fragment
+      android:id="@+id/secondScreen"
+      android:name="com.stud.awra.testtask4.screens.SecondScreen"
+      tools:layout="@layout/screen_2">
+    <action
+        android:id="@+id/action_secondScreen_to_thirdScreen"
+        app:destination="@id/thirdScreen" />
+  </fragment>
+  <fragment
+      android:id="@+id/thirdScreen"
+      android:name="com.stud.awra.testtask4.screens.ThirdScreen"
+      android:label="Screen_third"
+      tools:layout="@layout/screen_3">
+    <argument
+        android:name="person"
+        app:argType="com.stud.awra.testtask4.model.Person"
+        app:nullable="false" />
+  </fragment>
+</navigation>

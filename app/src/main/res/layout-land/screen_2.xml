@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/screen2_srl"
+    tools:context=".screens.SecondScreen">
+
+  <androidx.recyclerview.widget.RecyclerView
+      android:id="@+id/screen2_rv_personal"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:orientation="vertical"
+      app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+      app:spanCount="2"
+      tools:itemCount="10"
+      tools:listitem="@layout/item_person" />
+
+  <com.google.android.material.progressindicator.CircularProgressIndicator
+      android:indeterminate="true"
+      android:id="@+id/screen2_progress_indicator"
+      android:layout_gravity="center"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content" />
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>

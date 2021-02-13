@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+  <data>
+
+    <variable
+        name="person"
+        type="com.stud.awra.testtask4.model.Person" />
+  </data>
+
+  <androidx.constraintlayout.widget.ConstraintLayout
+      android:layout_width="match_parent"
+      android:layout_height="wrap_content"
+      android:layout_margin="5dp"
+      android:background="@drawable/bg_item_personal"
+      android:orientation="vertical"
+      android:padding="10dp"
+      app:cardCornerRadius="5dp"
+      app:cardElevation="5dp">
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@{person.name +' '+person.surname }"
+        android:textColor="?colorPrimaryDark"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item_personal_id"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Ivan Ivanov"
+        style="@style/TextAppearance.MaterialComponents.Headline5" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:text="@{person.occupation}"
+        android:textColor="?colorSecondaryVariant"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/item_personal_id"
+        app:layout_constraintTop_toBottomOf="@+id/tv1"
+        tools:text="CEO"
+        style="@style/TextAppearance.MaterialComponents.Headline6"
+        android:id="@+id/tv2" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:src="@drawable/ic_person"
+        android:id="@+id/item_personal_id" />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
